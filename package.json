@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "vitest",
+    "test": "vitest run",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "lint": "tsc"
+    "lint": "tsc",
+    "ci": "npm run lint && npm run test && npm run build"
   },
   "keywords": [],
   "author": "Maikel Eckelboom",
@@ -14,6 +17,7 @@
     "@types/node": "^18.14.1",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5",
+    "vite": "^4.1.4",
     "vitest": "^0.28.5"
   }
 }
